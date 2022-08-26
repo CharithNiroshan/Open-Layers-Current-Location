@@ -66,6 +66,9 @@ function App() {
     geolocation.on('change:position', function () {
         const coordinates = geolocation.getPosition();
         positionFeature.setGeometry(coordinates ? new Point(coordinates) : null);
+        setTimeout(()=>{
+            view.animate({center: coordinates, zoom: 14, duration: 2000});
+        },[500])
     });
 
     const locateMe = () => {
