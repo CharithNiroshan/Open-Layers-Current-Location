@@ -1,0 +1,62 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.app{
+    width: 100%;
+    padding: 10vh 0;
+    min-height: 100vh;
+    background-image: url("../images/bg-image.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.map-container{
+    width: 80%;
+    height: 80vh;
+    overflow-y: hidden;
+    position: relative;
+    z-index: 0;
+}
+
+#map {
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.ol-zoom{
+    margin: 10px 0 0 10px;
+}
+
+.ol-zoom-in{
+    margin-right: 10px;
+}
+
+.button,.ol-zoom-in,.ol-zoom-out{
+    padding: 8px 15px;
+    border-radius: 4px;
+    background-color: blue;
+    color:white;
+    font-size: 14px;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+}
+
+.button{
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    z-index: 2;
+    margin-top:20px;
+}
+
+.ol-hidden,.ol-uncollapsible{
+    display: none !important;
+}
